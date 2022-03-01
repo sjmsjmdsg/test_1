@@ -1,6 +1,6 @@
 # Imported into code using
-tax2 = 11
-from finance import *
 
+from finance import *
+tax2 = 11
 print(tax1)
 print(tax2)
