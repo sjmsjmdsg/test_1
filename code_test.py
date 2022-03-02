@@ -15,11 +15,6 @@ def filterScriptTags(content):
     return content
 
 
-urlpatterns = [
-    # Route to code_execution
-    url(r'^code-ex1$', code_execution_bad, name='code-execution-bad'),
-    url(r'^code-ex2$', code_execution_good, name='code-execution-good')
-]
 
 def code_execution(request):
     if request.method == 'POST':
@@ -29,3 +24,4 @@ def code_execution(request):
 
 if __name__ == '__main__':
     filterScriptTags('asdasd')
+    code_execution('asd')
