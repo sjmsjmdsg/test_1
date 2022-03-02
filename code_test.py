@@ -11,10 +11,13 @@ def filterScriptTags(content):
     oldContent = ""
     while oldContent != content:
         oldContent = content
-        # content = re.sub(r'<script.*?>.*?</script>', '', content, flags= re.DOTALL | re.IGNORECASE)
+        content = re.sub(r'<script.*?>.*?</script>', '', content, flags= re.DOTALL | re.IGNORECASE)
     return content
 
-
+def area(r):
+    #if DEBUG:
+    #   print("Computing area of %r" % r)
+    return r
 
 def code_execu:
     if request.method == 'POST':
@@ -24,4 +27,5 @@ def code_execu:
 
 if __name__ == '__main__':
     filterScriptTags('asdasd')
+    area('a')
     code_execu
