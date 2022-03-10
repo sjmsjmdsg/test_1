@@ -1,0 +1,16 @@
+name: authenticate-docker-image-sbom
+on:
+  push
+
+jobs:
+  authenticate-image-sbom:
+    runs-on: ubuntu-latest
+    steps:
+      # Pull an image whos SBOM has been previously notarized
+      - name: pull image
+        run: docker pull codenotary/cas:bom-docker
+        shell: bash
+
+      - name: authenticate sample asset
+        #--> Run the GitHub action
+        uses: codenotary/cas-authenticate-docker-bom-github-action@main
